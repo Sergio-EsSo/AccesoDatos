@@ -1,0 +1,30 @@
+a) Predice todas las líneas impresas, en orden. Explica cuántas veces se ejecutan el bloque static y el
+constructor.
+
+Carga
+0
+2
+
+El bloque static se ejecuta una vez y el constructor 2 veces (1 por cada new)
+
+
+b) Explica por qué total se comparte y la constante MAX no puede reasignarse. ¿El código impide por sí solo
+crear más de tres objetos?
+
+total se comparte entre todas las instancias por pertenecer a la clase (static)
+MAX es constante (final) y su valor no puede cambiar tras inicializarse
+
+el codigo define una constante de valor 3 pero no impide mas objetos
+
+c) Añade un atributo de instancia nombre. Explica cómo podría leerlo un método estático que recibe un
+objeto Contador como parámetro.
+
+public static void mostrarNombre(Contador c) {
+    ystem.out.println(c.nombre);
+}
+
+d) Explica el efecto de final aplicado a una clase y a un método, y cómo difiere de su uso en un atributo.
+
+clase: impide la herencia
+metodo: impide la sobreescritura en clases hijas
+atributo: convierte el campo en inmutable
